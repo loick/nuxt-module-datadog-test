@@ -1,0 +1,14 @@
+{
+    "name": "nuxt-module-datadog-test",
+    "private": true,
+    "version": "1.0.0",
+    "repository": "git@github.com:BackMarket/nuxt-module-datadog-test.git",
+    "author": "Loick Le Digabel",
+    "engines": {
+      "npm": ">= 6.14.7",
+      "node": "14.5.0"
+    },
+    "dependencies": {
+      "dd-trace": "0.24.0"
+    }
+  }
