@@ -1,9 +1,11 @@
+const path = require('path')
+
+const tracer = require('dd-trace')
+
 // Inspired by https://github.com/aaronransley/nuxt-datadog-trace/blob/master/index.js
 module.exports = function DatadogTrace(moduleOptions) {
   this.nuxt.hook('render:before', () => {
-    const path = require('path')
     const hostAppPkg = require(path.resolve(this.options.rootDir, 'package.json'))
-    const tracer = require('dd-trace')
 
     tracer.init({
       hostname: process.env.DD_TRACE_AGENT_HOSTNAME,
